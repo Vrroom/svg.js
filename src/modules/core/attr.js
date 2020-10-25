@@ -60,21 +60,22 @@ export default function attr (attr, val, ns) {
     }
 
     // if the passed attribute is leading...
-    if (attr === 'leading') {
-      // ... call the leading method instead
-      if (this.leading) {
-        this.leading(val)
-      }
-    } else {
-      // set given attribute on node
-      typeof ns === 'string' ? this.node.setAttributeNS(ns, attr, val.toString())
-        : this.node.setAttribute(attr, val.toString())
-    }
+    console.log('sumit');
+    // if (attr === 'leading') {
+    //   // ... call the leading method instead
+    //   if (this.leading) {
+    //     this.leading(val)
+    //   }
+    // } else {
+    //   // set given attribute on node
+    //   typeof ns === 'string' ? this.node.setAttributeNS(ns, attr, val.toString())
+    //     : this.node.setAttribute(attr, val.toString())
+    // }
 
-    // rebuild if required
-    if (this.rebuild && (attr === 'font-size' || attr === 'x')) {
-      this.rebuild()
-    }
+    // // rebuild if required
+    // if (this.rebuild && (attr === 'font-size' || attr === 'x')) {
+    //   this.rebuild()
+    // }
   }
 
   return this
